@@ -1,0 +1,76 @@
+<img src="assets/images/582546665e381618f448f8f2a8ede.jpg">
+<div class="promo">
+  <span class="pro">PROMO 2021</span> <br/>
+  <span class="reduc">15% de réduction<br/>
+  Pc gamer</span> 
+</div>
+<button routerLink="/produit">La boutique</button>
+
+<img src="assets/images/comparatif-Meilleur-PC-portable-gamer-1024x539.jpg" class="img_right">
+<img src="assets/images/pc-portable.webp" class="img_left">
+
+<p style="margin-left: 100px;" class="text">GARANTIE 2 ANS</p>
+<p style="margin-left: 60px;" class="text"><br/>SUR TOUS LES APPAREILS</p>
+
+<div class="nav">
+  <p class="liv">Livraison gratuite   <span style="color: rgba(81, 88, 215, 0.958);">\</span>   Sous 7 jours</p>
+</div>
+
+
+<div class="abc">
+  <div class="stand" [routerLink]="['/buy', 0]">
+      <img [src]="produits[0].img_dir">
+      <div class="txt">
+        <h1>{{ produits[0].nom }}</h1> 
+        <p>{{ produits[0].ref }}</p>
+        <h2>{{ produits[0].prix }} DT</h2>
+      </div>
+  </div>
+  <div class="stand" [routerLink]="['/buy', 1]">
+    <img [src]="produits[1].img_dir">
+    <div class="txt">
+      <h1>{{ produits[1].nom }}</h1> 
+      <p>{{ produits[1].ref }}</p>
+      <h2>{{ produits[1].prix }} DT</h2>
+    </div>
+</div>
+<div class="stand" [routerLink]="['/buy', 2]">
+  <img [src]="produits[2].img_dir">
+  <div class="txt">
+    <h1>{{ produits[2].nom }}</h1> 
+    <p>{{ produits[2].ref }}</p>
+    <h2>{{ produits[2].prix }} DT</h2>
+  </div>
+</div>
+<div class="stand" [routerLink]="['/buy', 3]">
+  <img [src]="produits[3].img_dir">
+  <div class="txt">
+    <h1>{{ produits[3].nom }}</h1> 
+    <p>{{ produits[3].ref }}</p>
+    <h2>{{ produits[3].prix }} DT</h2>
+  </div>
+</div>
+<div class="stand" [routerLink]="['/buy', 4]">
+  <img [src]="produits[4].img_dir">
+  <div class="txt">
+    <h1>{{ produits[4].nom }}</h1> 
+    <p>{{ produits[4].ref }}</p>
+    <h2>{{ produits[4].prix }} DT</h2>
+  </div>
+</div>
+</div>
+
+<button class="more" routerLink="/produit"> -> </button>
+
+<div class="entrep"></div>
+
+<div class="pc">
+  <img src="assets/images/téléchargement.png" class="logo">
+  <img src="assets/images/images.png" class="logo">
+  <img src="assets/images/Informatique_-_Acer.jpg" class="logo">
+  <img src="assets/images/dell.png" class="logo">
+</div>
+
+<div class="endbar">
+
+</div>

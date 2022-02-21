@@ -1,0 +1,50 @@
+.left{
+  float: left;
+  width: 50%;
+  height: 70%;
+}
+
+.left img{
+  margin: 10% 0 0 10%;
+  width: 80%;
+  height: 80%;
+}
+
+.right{
+  position: absolute;
+  right: 1%;
+  margin-top: 3%;
+  width: 50%;
+  height: 70%;
+}
+
+.right div{
+  width: 60%;
+}
+
+.right h2{
+  margin: 0 10px 10px 0;
+  color: rgba(81, 88, 215, 0.958);
+}
+
+.right input{
+  width: 5%;
+  margin: 10px;
+}
+
+.right button{
+  width: 60%;
+  margin: 15px 0 15px 0;
+  background-color: rgba(81, 88, 215, 0.958);
+  color: white;
+  border: 1px solid rgba(81, 88, 215, 0.958);
+}
+
+.right button:hover{
+  background-color: white;
+  color: rgba(81, 88, 215, 0.958);
+}
+
+.right div{
+  margin-top: 20px;
+}

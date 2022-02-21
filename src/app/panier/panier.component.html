@@ -1,0 +1,16 @@
+<div class="container" >
+  <div class="commande">
+    <h2>Mon Commandes</h2>
+    <div class="line"></div>
+    <div class="pc" *ngFor="let cmd of commandes">
+      <img [src]="cmd.img_dir">
+      <h4>{{cmd.nom_prod}}</h4>
+      <p>{{cmd.etat}}</p>
+      <h6>{{cmd.quantite}}</h6>
+      <h5>{{cmd.total}}DT</h5>
+      <div class="line-inside"></div>
+    </div>
+  </div>
+
+
+

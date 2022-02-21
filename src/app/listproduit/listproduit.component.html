@@ -1,0 +1,41 @@
+<div class="container" >
+  
+  <button class="add" routerLink="/addp">+ Add Produit</button>
+
+  <div class="input-group rounded">
+    <input type="search" class="form-control" Placeholder="Rechercher" [(ngModel)]="recherche" aria-label="Search"aria-describedby="search-addon"/>
+  </div>
+
+  <table class="table " >
+    <thead>
+      <tr>
+        <th scope="col"><input type="checkbox"/></th>
+        <th scope="col">ID</th>
+        <th>   </th>
+        <th scope="col">Name</th>
+        <th scope="col">Réference</th>
+        <th scope="col">Quantite</th>
+        <th scope="col">Prix</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of produits; index as i">
+        <ng-container *ngIf="(recherche | uppercase) == prod.nom.substr(0,recherche.length)">
+        <th scope="row"><input type="checkbox"/></th>
+        <td > #{{ prod.id }} </td>
+        <td> <img [src]="prod.img_dir"></td>
+        <td >{{ prod.nom }} </td>
+        <td > {{ prod.ref }} </td>
+        <td > {{ prod.quant }} </td>
+        <td > {{ prod.prix }}Dt </td>
+        <td >
+          <button class="btn btn-primary" [routerLink]="['/modifp', i]">Edit</button>
+          <button class="btn btn-danger" (click)="remove(prod.id)">Supprimer</button>
+        </td>
+        </ng-container>
+      </tr>
+     
+    </tbody>
+  </table>
+  </div>

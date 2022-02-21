@@ -1,0 +1,16 @@
+<div class="left">
+  <img [src]="produit[id].img_dir">
+</div>
+
+<div class="right">
+  <h2>{{produit[id].nom}}</h2>
+  <span>{{produit[id].ref}}</span>
+  <h3>{{produit[id].prix}}DT</h3>
+  <label>Quantite</label><br/>
+  <input type="number" [(ngModel)]="quant" /><br/>
+  <button (click)="commander()">Commander</button>
+  <div>
+    <h4>RÉSUMÉ DE L'ARTICLE</h4>
+    <p>Détails d'article. Saisissez ici les caractéristiques de l'article : taille, matière et autres détails utiles. Vous pouvez aussi ajouter ici toute information complémentaire. Cet emplacement est idéal pour expliquer les avantages de cet article à vos clients. Les clients aiment avoir le plus d'informations possible sur un article avant de l'acheter. Rassurez vos clients avec des détails supplémentaires.</p>
+  </div>
+</div>

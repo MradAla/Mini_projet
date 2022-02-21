@@ -1,0 +1,40 @@
+<div class="container">
+  
+  
+  <form #f="ngForm">
+    <h2 class="text-center">Modiffier Produit</h2>
+    <div class="form-group first">
+      <label>Nom :</label>    
+      <input type="text" class="form-control" [(ngModel)]="produit[id].nom" name="nom" required >
+    </div>
+    <div class="form-group first">
+      <label>Réference :</label>    
+      <input type="text" class="form-control" [(ngModel)]="produit[id].ref" name="ref" required disabled>
+    </div>
+    <div class="form-group first">
+      <label>Disc :</label>    
+      <textarea style="height: 120px;" class="form-control" [(ngModel)]="produit[id].disc" name="disc" required></textarea>
+    </div>
+    <div class="form-group first">
+      <label>Quantite :</label>    
+      <input type="text" class="form-control" [(ngModel)]="produit[id].quant" name="quant" required>
+    </div>
+    <div class="form-group first">
+      <label>Prix :</label>    
+      <input type="text" class="form-control" [(ngModel)]="produit[id].prix" name="prix" required>
+    </div>
+    
+    <div class="form-group">
+      <label>Select image to upload :</label>
+      <input type="file" accept="image/*" name="image" class="form-control" #fileUploader (change)="showPreview($event)">
+    </div>
+    <div class="text-center">
+      <img [src]="produit[id].img_dir" width="350px" height="250px" (click)="fileUploader.click()">
+    </div>
+
+    <button class="btn btn-danger">Annuler</button>
+    <button class="btn mod" (click)="modif(f)">Modifier</button>
+    
+  </form>
+</div>
+

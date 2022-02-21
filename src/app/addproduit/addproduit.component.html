@@ -1,0 +1,39 @@
+<div class="container">
+  
+  
+  <form #f="ngForm"  enctype="multipart/form-data" method="post">
+    <h2 class="text-center">Ajouter Produit</h2>
+    <div class="form-group first">
+      <label>Nom :</label>    
+      <input type="text" class="form-control"  name="nom" required ngModel>
+    </div>
+    <div class="form-group first">
+      <label>Réference :</label>    
+      <input type="text" class="form-control" placeholder="" name="ref" required ngModel>
+    </div>
+    <div class="form-group first">
+      <label>Disc :</label>    
+      <textarea style="height: 120px;" class="form-control" placeholder="" name="disc" required ngModel></textarea>
+    </div>
+    <div class="form-group first">
+      <label>Quantite :</label>    
+      <input type="text" class="form-control" placeholder="" name="quant" required ngModel>
+    </div>
+    <div class="form-group first">
+      <label>Prix :</label>    
+      <input type="text" class="form-control" placeholder="" name="prix" required ngModel>
+    </div>
+    
+    <div class="form-group">
+      <label>Select image to upload :</label>
+      <input type="file" accept="image/*" name="image" class="form-control" #fileUploader (change)="showPreview($event)">
+    </div>
+    <div class="text-center">
+      <img [src]="imgSrc" width="350px" height="250px" (click)="fileUploader.click()">
+    </div>
+
+    <button class="btn btn-danger">Annuler</button>
+    <button class="btn mod" (click)="ajouter(f)">Ajouter</button>
+    
+  </form>
+</div>

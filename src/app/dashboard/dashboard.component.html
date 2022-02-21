@@ -1,0 +1,68 @@
+<div class="container" >
+<table class="table " >
+  <thead>
+    <tr>
+      <th scope="col"><input type="checkbox"/></th>
+      <th scope="col">Order ID</th>
+      <th scope="col">Client</th>
+      <th scope="col">Produit</th>
+      <th scope="col">Quantite</th>
+      <th scope="col">Total</th>
+      <th scope="col">Payement Status</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cmd of cmds">
+      <th scope="row" *ngIf="cmd.etat == 'en attente'"><input type="checkbox"/></th>
+      <td *ngIf="cmd.etat == 'en attente'"> #{{ cmd.id_order }} </td>
+      <td *ngIf="cmd.etat == 'en attente'"> {{ cmd.client }} </td>
+      <td *ngIf="cmd.etat == 'en attente'"> {{ cmd.nom_prod }} </td>
+      <td *ngIf="cmd.etat == 'en attente'"> {{ cmd.quantite }} </td>
+      <td *ngIf="cmd.etat == 'en attente'"> {{ cmd.total }}Dt </td>
+      <td *ngIf="cmd.etat == 'en attente'"><span class="badge rounded-pill font-size-12" [ngClass]="{ 'bg-warning' : cmd.payment_status == 'refund',
+                                                                      'bg-danger' : cmd.payment_status == 'chargeback',
+                                                                      'bg-success' : cmd.payment_status == 'paid'}">{{ cmd.payment_status }}</span></td>
+      <td *ngIf="cmd.etat == 'en attente'">
+        <button class="btn btn-primary" (click)="setEtat(cmd.id_order,'accepted')">Accepte</button>
+        <button class="btn btn-danger" (click)="setEtat(cmd.id_order,'refused')">Refuse</button>
+      </td>
+    </tr>
+   
+  </tbody>
+</table>
+
+<div class="line"></div>
+
+<table class="table " >
+  <thead>
+    <tr>
+      <th scope="col"><input type="checkbox"/></th>
+      <th scope="col">Order ID</th>
+      <th scope="col">Client</th>
+      <th scope="col">Produit</th>
+      <th scope="col">Quantite</th>
+      <th scope="col">Total</th>
+      <th scope="col">Payement Status</th>
+      <th scope="col">Etat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cmd of cmds">
+      <th scope="row" *ngIf="cmd.etat != 'en attente'"><input type="checkbox"/></th>
+      <td *ngIf="cmd.etat != 'en attente'"> #{{ cmd.id_order }} </td>
+      <td *ngIf="cmd.etat != 'en attente'"> {{ cmd.client }} </td>
+      <td *ngIf="cmd.etat != 'en attente'"> {{ cmd.nom_prod }} </td>
+      <td *ngIf="cmd.etat != 'en attente'"> {{ cmd.quantite }} </td>
+      <td *ngIf="cmd.etat != 'en attente'"> {{ cmd.total }}Dt </td>
+      <td *ngIf="cmd.etat != 'en attente'"><span class="badge rounded-pill font-size-12" [ngClass]="{ 'bg-warning' : cmd.payment_status == 'refund',
+                                                                      'bg-danger' : cmd.payment_status == 'chargeback',
+                                                                      'bg-success' : cmd.payment_status == 'paid'}">{{ cmd.payment_status }}</span></td>
+      
+      <td *ngIf="cmd.etat != 'en attente'"><span class="badge rounded-pill font-size-12" [ngClass]="{'bg-danger' : cmd.etat == 'refused',
+          'bg-success' : cmd.etat == 'accepted'}">{{ cmd.etat }}</span></td>
+    </tr>
+   
+  </tbody>
+</table>
+</div>

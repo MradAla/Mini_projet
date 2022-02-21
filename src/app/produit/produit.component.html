@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="abc">
+    <div class="stand" *ngFor="let prod of produits; index as i" [routerLink]="['/buy', i]">
+        <img [src]="prod.img_dir">
+        <div class="txt">
+          <h1>{{ prod.nom }}</h1> 
+          <p>{{ prod.ref }}</p>
+          <h2>{{ prod.prix }} DT</h2>
+        </div>
+    </div>
+    <div class="stand" *ngFor="let prod of produits">
+      <img [src]="prod.img_dir">
+      <div class="txt">
+        <h1>{{ prod.nom }}</h1> 
+        <p>{{ prod.ref }}</p>
+        <h2>{{ prod.prix }} DT</h2>
+      </div>
+  </div>
+  <div class="stand" *ngFor="let prod of produits">
+    <img [src]="prod.img_dir">
+    <div class="txt">
+      <h1>{{ prod.nom }}</h1> 
+      <p>{{ prod.ref }}</p>
+      <h2>{{ prod.prix }} DT</h2>
+    </div>
+</div>
+</div>
+</div>

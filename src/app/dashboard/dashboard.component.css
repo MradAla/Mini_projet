@@ -1,0 +1,40 @@
+.container{
+  margin-top: 100px;
+}
+
+.table{
+  color: white;
+}
+
+thead{
+  color: white;
+  background-color: #6E00FA;
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+tbody td,tbody th{
+  color: rgb(39, 39, 39);
+  font-size: 95%;
+}
+
+.table{
+  box-shadow: 2px 3px 10px gray;
+}
+
+.btn{
+  border-radius: 25px;
+  font-size: smaller;
+}
+
+.badge{
+  opacity: 0.66;
+}
+
+.line{
+  margin: 60px;
+  width: 91%;
+  height: 2px;
+  background-color: rgb(180, 180, 180);
+}

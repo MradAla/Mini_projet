@@ -1,0 +1,57 @@
+<div class="content">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 contents">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <div class="form-block">
+                <div class="mb-4">
+                <h3 class="welcome text-center"><strong>Welcome </strong></h3>
+                <p class="mb-4 text-center">SignUp to continue</p>
+              </div>
+              <form #f="ngForm">
+                <div class="form-group first">
+                  
+                  <input type="text" class="form-control" placeholder="name" name="name" id="name" required ngModel>
+                  
+                </div>
+                <div class="form-group first">
+                  
+                  <input type="text" class="form-control" placeholder="Email" name="email" id="email" required ngModel>
+                  
+                </div>
+                <div class="form-group last mb-4">
+                  
+                  <input type="password" class="form-control" placeholder="Password" name="password" id="password" required ngModel>
+                  
+                </div>
+                <div class="form-group last mb-4">
+                  
+                  <input type="password" class="form-control" placeholder="Password confirmation" name="c_password" id="c_password" required ngModel>
+                  
+                </div>
+
+                <div class="d-flex mb-5 align-items-center">
+                  <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                    <input type="checkbox"/>
+                    <div class="control__indicator"></div>
+                  </label>
+                   
+                </div>
+                
+
+                <input type="submit" value="Sign up" class="btn btn-pill text-white btn-block btn-primary" (click)="signup(f)">
+
+                <span class="d-block text-center my-4 text-muted">Do you have an account ?<a routerLink="/" style="color:#6E00FA"> Signin now</a></span>
+              
+              </form>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
